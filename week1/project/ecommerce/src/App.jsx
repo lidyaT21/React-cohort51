@@ -1,23 +1,23 @@
 import { useState } from "react";
-import Categories from "./components/Categories.jsx";
-import Product from "./components/Product.jsx";
 import "./App.css";
-import Products from "./fake-data/all-products.js";
+import ButtonSet from "./components/ButtonSet.jsx";
+import CardSetMain from "./components/CardSetMain.jsx";
+import allProducts from "./fake-data/all-products.js";
 
 function App() {
-  const [SelectedProducts, setSelectedProducts] = useState(Products);
+  const [filterCards, setFilterCards] = useState(allProducts);
 
-  const FilteredCard = (category) => {
-    const filtered = Products.map((card) => card.category === category);
-    setSelectedProducts(filtered);
+  const handleFilterCards = (category) => {
+    const filtered = allProducts.filter((card) => card.category === category);
+    setFilterCards(filtered);
   };
 
   return (
-    <div>
+    <main>
       <h1>Products</h1>
-      <Categories setSelectedProducts={FilteredCard} />
-      <Product SelectedProducts={SelectedProducts} />
-    </div>
+      <ButtonSet setFilterCards={handleFilterCards} />
+      <CardSetMain filterCards={filterCards} />
+    </main>
   );
 }
 

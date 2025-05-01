@@ -1,6 +1,4 @@
-import React from "react";
-
-const ProductCard = (props) => {
+const Card = (props) => {
   return (
     <div className="card">
       <img src={props.image} alt={props.title} />
@@ -9,4 +7,4 @@ const ProductCard = (props) => {
   );
 };
 
-export default ProductCard;
+export default Card;

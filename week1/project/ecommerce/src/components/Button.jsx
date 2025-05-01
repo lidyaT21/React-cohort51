@@ -1,10 +1,6 @@
-import React from "react";
-
-const Button = ({ buttonName, setSelectedProducts }) => {
+const Button = ({ buttonName, setFilterCards }) => {
   return (
-    <button onClick={() => setSelectedProducts(buttonName)}>
-      {buttonName}
-    </button>
+    <button onClick={() => setFilterCards(buttonName)}>{buttonName}</button>
   );
 };
 
