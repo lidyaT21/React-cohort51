@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import { useFavorites } from "../context/FavoritesContext.jsx";
 import Header from "../components/Header.jsx";

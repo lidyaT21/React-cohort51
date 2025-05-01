@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { useFavorites } from "../context/FavoritesContext.jsx";
 import ProductItem from "../components/ProductItem.jsx";
