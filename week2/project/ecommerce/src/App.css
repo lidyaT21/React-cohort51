@@ -12,7 +12,7 @@ img {
   object-fit: cover;
 }
 
-.card-set {
+.product-list {
   width: 80%;
   display: flex;
   gap: 20px;
@@ -31,18 +31,25 @@ img {
   text-align: center;
 }
 
-button {
+.category-list {
+  background-color: rgb(196, 204, 225);
   width: calc(25% - 40px);
   height: 80px;
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
+  color: rgb(26, 41, 79);
+  font-size: 20px;
+  border: 5px rgb(165, 179, 212) solid;
+  border-radius: 20px;
   cursor: pointer;
   box-sizing: border-box;
 }
 
-button:active {
-  background-color: rgb(157, 171, 205);
+.category-list:hover {
+  width: 23%;
+  height: 88px;
+}
+
+.category-list:active {
+  background-color: rgb(26, 41, 79);
   color: white;
 }
 
@@ -69,18 +76,18 @@ h1 {
     width: calc(50% - 20px);
   }
 
-  .card-set {
+  .product-list {
     width: 90%;
     margin: 20px auto;
   }
 
-  button {
+  .category-list {
     width: calc(50% - 40px);
     height: 60px;
     font-size: 16px;
   }
 
-  button:hover {
+  .category-list:hover {
     width: 47%;
     height: 64px;
   }
@@ -97,18 +104,18 @@ h1 {
     width: 80%;
   }
 
-  .card-set {
+  .product-list {
     width: 90%;
     margin: 20px auto;
   }
 
-  button {
+  .category-list {
     width: 60%;
     height: 60px;
     font-size: 16px;
   }
 
-  button:hover {
+  .category-list:hover {
     width: 68%;
     height: 64px;
   }
@@ -118,4 +125,24 @@ h1 {
     height: auto;
     gap: 20px;
   }
+}
+
+.image-button img {
+  cursor: pointer;
+}
+
+.image-button img:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  max-width: 40%;
+}
+
+.product-card {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
 }
